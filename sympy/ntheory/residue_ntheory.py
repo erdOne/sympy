@@ -634,6 +634,8 @@ def is_nthpow_residue(a, n, m):
         raise ValueError('n must be >= 0')
     if a < 0:
         raise ValueError('a must be >= 0')
+    if a % m == 0:
+        return True
     if n == 0:
         if m == 1:
             return False
